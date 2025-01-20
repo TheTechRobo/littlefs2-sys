@@ -4,6 +4,7 @@ use std::path::PathBuf;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut builder = cc::Build::new();
     let builder = builder
+        .flag("-mlongcalls")
         .flag("-std=c11")
         .flag("-DLFS_NO_DEBUG")
         .flag("-DLFS_NO_WARN")
